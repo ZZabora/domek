@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Szaleny Architekt Domków dla Ptaków</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: "Comic Sans MS", cursive;
+    background: linear-gradient(135deg,#ffd6e7,#c5f0ff,#fff7c2);
+    overflow-x:hidden;
+}
+
+/* nagłówek */
+
+header{
+    text-align:center;
+    padding:60px;
+    transform: rotate(-2deg);
+}
+
+header h1{
+    font-size:60px;
+    color:#ff2e63;
+    text-shadow:3px 3px 0 #000;
+}
+
+header p{
+    font-size:20px;
+}
+
+/* ptaki */
+
+.bird{
+    position:absolute;
+    font-size:40px;
+    animation: fly 8s linear infinite;
+}
+
+.bird:nth-child(1){
+    top:80px;
+    left:-50px;
+    animation-delay:0s;
+}
+
+.bird:nth-child(2){
+    top:200px;
+    left:-80px;
+    animation-delay:3s;
+}
+
+@keyframes fly{
+    from{
+        transform:translateX(-100px) rotate(0deg);
+    }
+    to{
+        transform:translateX(120vw) rotate(360deg);
+    }
+}
+
+/* sekcja projektów */
+
+.projects{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:50px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:25px;
+    transform: rotate(-3deg);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:nth-child(even){
+    transform: rotate(4deg);
+}
+
+.card:hover{
+    transform: scale(1.1) rotate(0deg);
+}
+
+.card h3{
+    color:#ff7b00;
+}
+
+.card p{
+    font-size:14px;
+}
+
+/* przycisk */
+
+button{
+    background:#ff2e63;
+    border:none;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff9a00;
+}
+
+/* stopka */
+
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bird">🐦</div>
+<div class="bird">🐤</div>
+
+<header>
+<h1>Szaleny Architekt</h1>
+<p>Projektuję najbardziej absurdalne domki dla ptaków na świecie!</p>
+<button>Obejrzyj moje projekty</button>
+</header>
+
+<section class="projects">
+
+<div class="card">
+<h3>Wieża dla wróbli</h3>
+<p>10 pięter luksusu. Winda z ziaren słonecznika.</p>
+</div>
+
+<div class="card">
+<h3>Minimalistyczna budka</h3>
+<p>Styl skandynawski dla nowoczesnych sikorek.</p>
+</div>
+
+<div class="card">
+<h3>Dom UFO</h3>
+<p>Dla ptaków które podejrzewamy o bycie kosmitami.</p>
+</div>
+
+<div class="card">
+<h3>Zamek dla gołębia</h3>
+<p>Bo każdy gołąb zasługuje na życie jak król.</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Szaleny Architekt Domków dla Ptaków 🐦🏠
+</footer>
+
+</body>
+</html>
